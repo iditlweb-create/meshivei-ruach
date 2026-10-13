@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>משיבי רוח · סקיצה ב׳ · סדנאות משמעות ורוח במקומות העבודה</title>
+<meta name="description" content="משיבי רוח — סדנאות ותהליכי למידה לארגונים סביב שאלות של משמעות, ערכים, זהות וחוסן אנושי. מרחב לחשיבה בעולם עבודה המשתנה במהירות.">
+<meta name="theme-color" content="#4F5639">
+<meta name="robots" content="noindex">
+<link rel="preload" href="assets/fonts/basalt-medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/discovery-light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">דילוג לתוכן הראשי</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <symbol id="ic-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3.5 6.5 8.5 6.6 8.5-6.6"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24"><path d="M6.4 3h3l1.5 4-2 1.4a12.4 12.4 0 0 0 6.7 6.7L17 13l4 1.5v3a2 2 0 0 1-2.2 2A17.2 17.2 0 0 1 4 5.2 2 2 0 0 1 6.4 3Z"/></symbol>
+  <symbol id="ic-whatsapp" viewBox="0 0 24 24"><path d="M20.4 11.7A8.4 8.4 0 0 1 7.8 19L3.5 20.5 5 16.2a8.4 8.4 0 1 1 15.4-4.5Z"/><path d="M9 8.4c.3-.1.6 0 .8.3l.8 1.4c.1.2.1.5-.1.7l-.6.6c.7 1.4 1.6 2.3 3 3l.6-.6c.2-.2.5-.2.7-.1l1.4.8c.3.2.4.5.3.8-.3.9-1.2 1.4-2.1 1.2-2.9-.6-5.3-3-5.9-5.9-.2-.9.3-1.8 1.1-2.2Z"/></symbol>
+  <symbol id="ic-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-facebook" viewBox="0 0 24 24"><path d="M14.4 21.5v-8h2.6l.4-3.1h-3V8.5c0-.9.3-1.5 1.6-1.5h1.6V4.2a22 22 0 0 0-2.4-.1c-2.4 0-4 1.5-4 4.1v2.2H8.6v3.1h2.6v8Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></symbol>
+  <symbol id="ic-q" viewBox="0 0 24 24"><path d="M9 9a3 3 0 1 1 4.2 2.7c-.9.5-1.2 1-1.2 2.1"/><circle cx="12" cy="17.2" r=".4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="ic-meaning" viewBox="0 0 96 96"><circle cx="48" cy="48" r="30"/><path d="M48 8v16M48 72v16M8 48h16M72 48h16"/><path d="M48 29l4.4 14.6L67 48l-14.6 4.4L48 67l-4.4-14.6L29 48l14.6-4.4Z"/><circle cx="48" cy="48" r="2.6"/></symbol>
+  <symbol id="ic-resilience" viewBox="0 0 96 96"><path d="M48 8 78 19v22c0 21-12 37-30 47C30 78 18 62 18 41V19Z"/><path d="M32 74L62 32"/><path d="M38.6 64.8Q45.4 71.8 51.1 63.8Q44.2 56.8 38.6 64.8Z"/><path d="M42.3 59.6Q48.0 51.6 39.2 47.4Q33.5 55.4 42.3 59.6Z"/><path d="M46.0 54.3Q52.9 61.3 58.5 53.4Q51.7 46.4 46.0 54.3Z"/><path d="M49.8 49.1Q55.5 41.2 46.6 37.0Q40.9 45.0 49.8 49.1Z"/><path d="M53.5 43.9Q60.3 50.9 65.9 43.0Q59.1 36.0 53.5 43.9Z"/><path d="M57.2 38.7Q62.9 30.8 54.1 26.6Q48.4 34.5 57.2 38.7Z"/><path d="M62.0 32.0Q71.4 31.8 68.5 22.8Q59.2 23.1 62.0 32.0Z"/></symbol>
+  <symbol id="ic-identity" viewBox="0 0 96 96"><circle cx="48" cy="38" r="7.5"/><path d="M33 80V68c0-8.6 6.6-15 15-15s15 6.4 15 15v12"/><circle cx="21" cy="46" r="6"/><path d="M8 82V72c0-7 5.4-12 12.4-12 4 0 7.4 1.6 9.6 4.2"/><circle cx="75" cy="46" r="6"/><path d="M88 82V72c0-7-5.4-12-12.4-12-4 0-7.4 1.6-9.6 4.2"/><path d="M24 28c6-9.6 14-14.4 24-14.4S66 18.4 72 28"/></symbol>
+  <symbol id="ic-sources" viewBox="0 0 96 96"><path d="M48 46c-10-7-23-9-37-7v33c14-2 27 0 37 7"/><path d="M48 46c10-7 23-9 37-7v33c-14-2-27 0-37 7"/><path d="M48 46v33"/><path d="M5 76v4c15-2.4 30-.4 43 6 13-6.4 28-8.4 43-6v-4"/><path d="M48 12v11M33 18l5 8M63 18l-5 8M22 30l8 4.4M74 30l-8 4.4"/></symbol>
+  <symbol id="ic-philosophy" viewBox="0 0 96 96"><path d="M66 88c0-8.6 1.6-13 5.6-18.6C76.4 63 79 56 79 47c0-18-14-31-31-31-16 0-29 12-29.6 27.6-.2 4-1.8 6.8-3.8 9.6l-4 5.6c-1.2 1.8 0 4 2 4h4.4v7.8c0 4.2 3.2 7.4 7.4 7.4H32V88"/><path d="M42 37a7 7 0 1 1 10 6.4c-2.4 1.2-4 3-4 5.6v2"/><circle cx="48" cy="57.5" r="0.9"/></symbol>
+  <symbol id="ic-jewish-sources" viewBox="0 0 96 96"><path d="M44 66H15a6 6 0 0 0 0 12h29"/><path d="M44 52H17a6 6 0 0 0 0 12h27"/><path d="M50 38H21a6 6 0 0 0 0 12h29"/><path d="M18 72h26M20 58h24M24 44h26"/><path d="M54 40h28a4.5 4.5 0 0 1 0 9h-4.5"/><path d="M54 40a4.5 4.5 0 0 0 0 9h3V78"/><path d="M77.5 49v29"/><path d="M48 86h30a6 6 0 0 0 0-12H51a6 6 0 0 0 0 12"/><path d="M63 56h9M63 62.5h9M63 69h6"/></symbol>
+  <symbol id="ic-discourse" viewBox="0 0 96 96"><path d="M40 16c16.6 0 29 9.6 29 22S56.6 60 40 60c-4.2 0-8.2-.6-11.6-1.8L15 65l3.4-11.4C14 49.6 11 44 11 38c0-12.4 12.4-22 29-22Z"/><path d="M60 36c14.4 0 25 8.4 25 19 0 5-2.4 9.4-6.4 12.8L81.6 78 70 72.4c-3 .8-6.4 1.2-10 1.2-14.4 0-25-8.4-25-19s10.6-18.6 25-18.6Z"/></symbol>
+  <symbol id="ic-dialogue" viewBox="0 0 96 96"><g transform="rotate(0 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><g transform="rotate(60 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><g transform="rotate(120 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><g transform="rotate(180 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><g transform="rotate(240 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><g transform="rotate(300 48 48)"><rect x="41.5" y="13" width="13" height="11" rx="2.6"/><path d="M40 8.6h16"/></g><circle cx="48" cy="48" r="13"/></symbol>
+  <symbol id="ic-training" viewBox="0 0 96 96"><path d="M6 86h18V74h16V62h16V50h16V38h18"/><circle cx="43" cy="15" r="5"/><path d="M41.4 22.6 37 42"/><path d="M40.6 27l9 7.4 6.4-2.4"/><path d="M40.4 27.4 33 37.6"/><path d="M37 42l9.6 6.6.4 13.4"/><path d="M37 42l-4.4 15.4-2.6 16.6"/></symbol>
+  <symbol id="ic-seminars" viewBox="0 0 96 96"><path d="M12 20h72l-6.4 20H18.4Z"/><path d="M48 20v20"/><path d="M24 26.4h17M25.4 32.6h15M55 26.4h17M55.6 32.6h15"/><path d="M48 40v40"/><path d="M33 86c3-4.6 27-4.6 30 0M30 86h36"/></symbol>
+  <symbol id="ic-managers" viewBox="0 0 96 96"><path d="M12 84C40 78 66 60 82 18"/><path d="M71.4 23.4 82 16l2.6 12.6"/><path d="M28 80c-.4-6.4 1.2-12.4 5-17"/><path d="M30 72c-8.6.4-14.4-3.6-17.6-10 8.4-1.6 14.6 2.4 17.6 10Z"/><path d="M32 66.6c1-8.4 6.8-13.4 14.6-14.4-.4 8.4-6.4 13.6-14.6 14.4Z"/></symbol>
+  <symbol id="ic-teams" viewBox="0 0 96 96"><path d="M18 31c11-13 37-19 58-4"/><path d="M66.4 21.4 76 27l-9.6 4.6"/><path d="M78 76c-13 11-39 13-58 1"/><path d="M29.4 82.4 20 77l9.6-5"/><circle cx="48" cy="40" r="6.4"/><path d="M36 70v-5.6c0-7.4 5.4-12.6 12-12.6s12 5.2 12 12.6V70"/><circle cx="26" cy="48" r="5.2"/><path d="M15 72v-3.4c0-6 4.8-10.4 11-10.4 2.6 0 5 .8 7 2.4"/><circle cx="70" cy="48" r="5.2"/><path d="M81 72v-3.4c0-6-4.8-10.4-11-10.4-2.6 0-5 .8-7 2.4"/></symbol>
+  <symbol id="ic-communities" viewBox="0 0 96 96"><circle cx="48" cy="18" r="6.2"/><circle cx="78.4" cy="40.1" r="6.2"/><circle cx="66.8" cy="75.9" r="6.2"/><circle cx="29.2" cy="75.9" r="6.2"/><circle cx="17.6" cy="40.1" r="6.2"/><path d="M54.9 18.8A32 32 0 0 1 75.6 33.8"/><path d="M79.9 46.9A32 32 0 0 1 72.0 71.2"/><path d="M60.8 79.3A32 32 0 0 1 35.2 79.3"/><path d="M24.0 71.2A32 32 0 0 1 16.1 46.9"/><path d="M20.4 33.8A32 32 0 0 1 41.1 18.8"/></symbol>
+  <symbol id="ic-resilience-programs" viewBox="0 0 96 96"><path d="M48 66V22"/><path d="M48 54c-7-5-14-8-23-9M48 47c5-7 12-11 21-12.4M48 58c7-3.6 15-4.4 23-2.6M48 38c-4.6-5-10-7.6-16-8.4M48 32c3-5 7-8 12-9.6"/><path d="M8 66h80"/><path d="M48 66c-6 6.4-15 8.4-25 8.6M48 66c6 6.4 15 8.4 25 8.6M48 66c-2 8.6-7.4 14.6-14 18.6M48 66c2 8.6 7.4 14.6 14 18.6M48 66v24M36 72.6c-4 4-6 8.6-6.4 14M60 72.6c4 4 6 8.6 6.4 14"/><path d="M48.0 22.0Q54.4 17.2 48.0 12.5Q41.6 17.2 48.0 22.0Z"/><path d="M25.0 45.0Q21.4 37.9 15.6 43.4Q19.2 50.5 25.0 45.0Z"/><path d="M25.0 45.0Q28.8 38.0 21.0 36.4Q17.2 43.4 25.0 45.0Z"/><path d="M33.0 47.6Q33.5 39.6 25.7 41.5Q25.2 49.4 33.0 47.6Z"/><path d="M69.0 34.6Q74.8 40.1 78.4 33.0Q72.6 27.5 69.0 34.6Z"/><path d="M69.0 34.6Q76.6 32.3 72.2 25.7Q64.6 27.9 69.0 34.6Z"/><path d="M60.0 38.6Q67.9 37.7 64.8 30.4Q56.8 31.3 60.0 38.6Z"/><path d="M71.0 55.4Q76.3 61.4 80.5 54.6Q75.2 48.6 71.0 55.4Z"/><path d="M63.0 54.6Q71.0 54.4 68.4 46.8Q60.5 47.0 63.0 54.6Z"/><path d="M32.0 29.6Q35.2 22.3 27.2 21.4Q24.1 28.7 32.0 29.6Z"/><path d="M32.0 29.6Q27.8 22.8 22.5 28.8Q26.7 35.6 32.0 29.6Z"/><path d="M40.0 33.6Q41.8 25.8 33.9 26.3Q32.0 34.1 40.0 33.6Z"/><path d="M60.0 22.4Q67.8 24.2 67.3 16.3Q59.5 14.4 60.0 22.4Z"/><path d="M54.0 26.6Q61.4 23.7 56.5 17.4Q49.0 20.4 54.0 26.6Z"/></symbol>
+  <symbol id="ic-degree" viewBox="0 0 96 96"><path d="M10 70h63c4.6 0 8 3.2 8 7s-3.4 7-8 7H10"/><path d="M10 70v14M16 77h56"/><path d="M48 14 86 28 48 42 10 28Z"/><path d="M24 34v13c0 5 10.6 9 24 9s24-4 24-9V34"/><path d="M48 28l27 5.6V50"/><path d="M72.6 50h5l2.4 8h-9.8Z"/></symbol>
+  <symbol id="ic-questions" viewBox="0 0 96 96"><path d="M48 60c-10-6.6-23-8.4-37-6.4V82c14-2 27 0 37 6"/><path d="M48 60c10-6.6 23-8.4 37-6.4V82c-14-2-27 0-37 6"/><path d="M48 60v28"/><path d="M42 25a6.4 6.4 0 1 1 9.2 5.8c-2 1-3.2 2.6-3.2 4.8v2"/><circle cx="48" cy="44" r="0.9"/><path d="M48 6v5M31 13l3.6 4M65 13l-3.6 4M25 28h5.6M66.4 28H72"/></symbol>
+  <symbol id="ic-facilitation" viewBox="0 0 96 96"><path d="M50 14h38M53 14v32h32V14"/><path d="M57 46l-4 22M81 46l4 22M69 46v10"/><path d="M60 24h18M60 31h14"/><circle cx="28" cy="20" r="5.6"/><path d="M20 56V38c0-5 3.6-8.4 8-8.4s8 3.4 8 8.4"/><path d="M35 37l9 2.4 10-6.4"/><circle cx="20" cy="68" r="5"/><circle cx="48" cy="68" r="5"/><circle cx="76" cy="68" r="5"/><path d="M9 90c0-7.4 4.6-11.6 11-11.6S31 82.6 31 90M37 90c0-7.4 4.6-11.6 11-11.6S59 82.6 59 90M65 90c0-7.4 4.6-11.6 11-11.6S87 82.6 87 90"/></symbol>
+  <clipPath id="hero-book-clip" clipPathUnits="objectBoundingBox"><path id="hero-book-clip-path" d="M0 .403 C.06 .573 .17 .633 .31 .613 C.48 .593 .68 .593 .82 .633 C.92 .683 .97 .813 1 .883 L1 1 L0 1Z"/></clipPath>
+  <clipPath id="card-book-clip" clipPathUnits="objectBoundingBox"><path d="M0 .06 C.1 .2 .23 .26 .39 .24 C.57 .21 .75 .22 .87 .31 C.95 .38 .99 .55 1 .72 L1 1 L0 1Z"/></clipPath>
+  <clipPath id="audience-page-clip" clipPathUnits="objectBoundingBox"><path d="M0 .14 C.13 .02 .29 0 .46 .06 C.64 .12 .82 .08 1 0 L1 .9 C.84 .82 .66 .85 .49 .94 C.31 1 .14 .98 0 .86Z"/></clipPath>
+</defs></svg>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top" aria-label="משיבי רוח — לראש העמוד">
+      <img class="nav__logo-full" src="assets/img/logo.svg" alt="משיבי רוח" width="388" height="181">
+      <span class="nav__logo-mobile" aria-hidden="true">
+        <img class="nav__book-mark" src="assets/img/book-symbol.svg" alt="" width="180" height="181">
+        <span class="nav__mobile-name">משיבי רוח</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="ניווט ראשי">
+      <a href="#offer">מה אנחנו מציעים</a>
+      <a href="#approach">הייחוד</a>
+      <a href="#audience">למי זה מתאים</a>
+      <a href="#about">על המנחה</a>
+    </nav>
+    <a class="nav__cta" href="#contact">יצירת קשר</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ══ 00+01 · הירו + הבעיה — קשת נפתחת (וידאו חדש) ══ -->
+  <section class="cine cine--hero"
+           data-section="00–01 · הירו + הבעיה (סקיצה ב׳)"
+           data-seq="hero" data-count="72" data-ext="jpg"
+           data-arch-end="0.5">
+    <div class="cine__sticky">
+
+      <svg class="arch-back" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+        <path id="hero-book-outline-path" d="M0 373 C70 543 200 603 350 583 C510 563 700 573 840 613 C930 663 980 783 1000 873"/>
+      </svg>
+      <div class="arch" data-el="hero-arch">
+        <canvas class="cine__canvas" aria-hidden="true"></canvas>
+        <img class="cine__poster" src="frames/hero/0001.jpg" alt="מסדרון אבן ירושלמית הנפתח אל חדר ישיבות מואר">
+      </div>
+
+      <div class="cine__loader" aria-hidden="true"><i></i></div>
+
+      <div class="hero-stage">
+        <div class="beat beat--hero" data-el="hero" data-from="0" data-to="0.2">
+          <h1 class="hero__title">משיבי רוח</h1>
+          <p class="hero__sub">סדנאות משמעות ורוח במקומות העבודה</p>
+          <p class="hero__lead">מרחב לחשיבה על משמעות, זהות ותכלית בעולם עבודה המשתנה במהירות.</p>
+          <a class="link-cta" href="#contact" data-el="hero-cta">
+            <span class="link-cta__label">להזמנת סדנא</span>
+            <span class="link-cta__rule">
+              <svg class="ic" aria-hidden="true"><use href="#ic-arrow"/></svg>
+              <i class="link-cta__line link-cta__line--1" aria-hidden="true"></i>
+              <i class="link-cta__line link-cta__line--2" aria-hidden="true"></i>
+              <i class="link-cta__line link-cta__line--3" aria-hidden="true"></i>
+            </span>
+          </a>
+        </div>
+        <div class="scrollcue" data-from="0" data-to="0.16" aria-hidden="true">
+          <span>גללו</span><i></i>
+        </div>
+      </div>
+
+      <div class="problem-stage" data-from="0.5">
+        <div class="problem-new__fade" aria-hidden="true"></div>
+
+        <header class="problem-new__copy" data-from="0.52">
+          <span class="problem-new__eyebrow">עובדים לא נשחקים רק מעומס</span>
+          <h2>האתגר האנושי בעולם העבודה</h2>
+          <p>ארגונים רבים משקיעים ברווחה, בהכשרות ובפיתוח מקצועי. אך לצד האתגרים המקצועיים מתעוררות גם שאלות אנושיות עמוקות יותר</p>
+        </header>
+
+        <img class="problem-new__person" data-from="0.54" src="assets/thinking-tech-worker.png" alt="עובד הייטק מהרהר בשאלות משמעות" width="1024" height="1536">
+
+        <div class="problem-question-pair problem-question-pair--one" data-from="0.62" aria-label="זוג השאלות הראשון">
+          <article class="problem-note problem-note--right">
+            <p>מה מעניק משמעות לעשייה?</p>
+          </article>
+          <article class="problem-note problem-note--left">
+            <p>כיצד מתמודדים עם חוסר ודאות?</p>
+          </article>
+        </div>
+
+        <div class="problem-question-pair problem-question-pair--two" data-from="0.82" aria-label="זוג השאלות השני">
+          <article class="problem-note problem-note--right">
+            <p>מה מחבר בין האדם לבין עבודתו?</p>
+          </article>
+          <article class="problem-note problem-note--left">
+            <p>כיצד בונים חוסן אישי וקהילתי?</p>
+          </article>
+        </div>
+
+        <div class="problem-new__progress" aria-hidden="true"><i></i><i></i></div>
+        <span class="problem-new__edge" aria-hidden="true">משיבי רוח / שאלות של משמעות</span>
+      </div>
+
+    </div>
+    <span class="anchor" id="problem"></span>
+  </section>
+
+  <!-- ══ 02 · מה אנחנו מציעים — סטטי ══ -->
+  <section class="band band--paper offer-windows" id="offer" data-section="02 · מה אנחנו מציעים">
+    <div class="wrap">
+      <header class="offer-windows__head">
+        <div>
+          <p class="offer-windows__eyebrow">התוכן פוגש את החיים</p>
+          <h2 class="h2">ארבעה מרחבי עיסוק</h2>
+        </div>
+        <p class="offer-windows__lead">כל מרחב פותח שאלה אחרת ומציע דרך חדשה להביט על העבודה ועל עצמנו.</p>
+      </header>
+      <div class="offer-windows__grid">
+        <article class="offer-window offer-window--green" data-el="card-meaning">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-meaning"/></svg>
+          <h3>משמעות בעבודה</h3>
+          <p>חקירת מקורות המשמעות של האדם והקשר לעשייה מקצועית.</p>
+        </article>
+        <article class="offer-window" data-el="card-resilience">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-resilience"/></svg>
+          <h3>חוסן בתקופות משבר</h3>
+          <p>כלים ותובנות להתמודדות עם אי-ודאות ושחיקה.</p>
+        </article>
+        <article class="offer-window" data-el="card-identity">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-identity"/></svg>
+          <h3>זהות ושייכות</h3>
+          <p>עיסוק בזהות אישית, קהילתית וישראלית.</p>
+        </article>
+        <article class="offer-window offer-window--green" data-el="card-sources">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-sources"/></svg>
+          <h3>מקורות השראה</h3>
+          <p>מפגש עם פילוסופיה, פסיכולוגיה ומקורות יהודיים-ישראליים.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 03 · הייחוד — סרט קולנועי מונע גלילה ══ -->
+  <section class="approach-film" id="approach" data-section="03 · הייחוד" data-video-scrub>
+    <div class="approach-film__sticky">
+      <img class="approach-film__poster" src="assets/media/approach-poster.png" alt="מעגל למידה בחדר ירושלמי מואר">
+      <video class="approach-film__video" muted playsinline preload="auto"
+             poster="assets/media/approach-poster.png" aria-hidden="true">
+        <source src="assets/media/approach-scroll-film-scrub.mp4" type="video/mp4">
+      </video>
+      <div class="approach-film__shade" aria-hidden="true"></div>
+
+      <div class="approach-film__content">
+        <p class="approach-film__eyebrow">הייחוד שלנו</p>
+        <h2>לא תשובות מהירות.<br>מרחב למחשבה.</h2>
+        <p class="approach-film__lead">מסורת ארוכה של עיסוק בשאלות החיים הגדולות</p>
+
+        <div class="approach-film__chapter" aria-atomic="true">
+          <p class="approach-film__counter"><span data-chapter-number>01</span><b aria-hidden="true">/</b>04</p>
+          <svg class="line-icon approach-film__icon" data-draw data-chapter-icon aria-hidden="true"><use href="#ic-philosophy"/></svg>
+          <h3 data-chapter-title>פילוסופיה מודרנית</h3>
+          <p data-chapter-copy>לשאול מחדש את מה שנדמה מובן מאליו</p>
+        </div>
+      </div>
+
+      <p class="approach-film__scrollcue" data-approach-cue><span aria-hidden="true">↓</span> גללו להמשך</p>
+
+      <ol class="approach-film__timeline" aria-label="פרקי הסדנה">
+        <li class="is-active" aria-current="step"><i></i><span>פילוסופיה מודרנית</span></li>
+        <li><i></i><span>מקורות יהודיים</span></li>
+        <li><i></i><span>שיח ישראלי עכשווי</span></li>
+        <li><i></i><span>למידה דיאלוגית</span></li>
+      </ol>
+
+      <div class="approach-film__fallback" aria-label="ארבעת מקורות הלמידה">
+        <article><svg class="line-icon approach-film__fallback-icon" data-draw aria-hidden="true"><use href="#ic-philosophy"/></svg><h3>פילוסופיה מודרנית</h3><p>לשאול מחדש את מה שנדמה מובן מאליו</p></article>
+        <article><svg class="line-icon approach-film__fallback-icon" data-draw aria-hidden="true"><use href="#ic-jewish-sources"/></svg><h3>מקורות יהודיים</h3><p>מפגש מחודש עם טקסטים חיים</p></article>
+        <article><svg class="line-icon approach-film__fallback-icon" data-draw aria-hidden="true"><use href="#ic-discourse"/></svg><h3>שיח ישראלי עכשווי</h3><p>דיאלוג על החברה, הזהות והעתיד</p></article>
+        <article><svg class="line-icon approach-film__fallback-icon" data-draw aria-hidden="true"><use href="#ic-dialogue"/></svg><h3>למידה דיאלוגית</h3><p>קהילה שחושבת יחד</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 04 · למי זה מתאים — מסגרות ══ -->
+  <section class="audience-frames" id="audience" data-section="04 · למי זה מתאים">
+    <div class="wrap">
+      <header class="audience-frames__head">
+        <p>משיבי רוח</p>
+        <h2>מסגרות שבהן התהליך עובד</h2>
+        <span>מרחב למחשבה, בכל מסגרת.</span>
+      </header>
+      <ul class="audience-frames__grid">
+        <li class="offer-window offer-window--green">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-training"/></svg>
+          <h3>הכשרות עובדים</h3>
+        </li>
+        <li class="offer-window">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-seminars"/></svg>
+          <h3>ימי עיון</h3>
+        </li>
+        <li class="offer-window offer-window--green">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-managers"/></svg>
+          <h3>תהליכי פיתוח מנהלים</h3>
+        </li>
+        <li class="offer-window">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-teams"/></svg>
+          <h3>צוותים בתקופות שינוי</h3>
+        </li>
+        <li class="offer-window offer-window--green">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-communities"/></svg>
+          <h3>קהילות מקצועיות</h3>
+        </li>
+        <li class="offer-window">
+          <svg class="line-icon offer-window__icon" data-draw aria-hidden="true"><use href="#ic-resilience-programs"/></svg>
+          <h3>תוכניות חוסן</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ 05 · על המנחה ══ -->
+  <section class="about-editorial" id="about" data-section="05 · על המנחה">
+    <div class="about-editorial__inner">
+      <figure class="about-editorial__portrait">
+        <span class="about-editorial__plane" aria-hidden="true"></span>
+        <img src="assets/img/yuval-kupit-original.jpg" alt="יובל קופיט, מנחה הסדנאות" width="1065" height="1600" loading="lazy" decoding="async">
+      </figure>
+
+      <div class="about-editorial__content">
+        <p class="about-editorial__eyebrow">על המנחה</p>
+        <h2>יובל קופיט</h2>
+        <p class="about-editorial__lead">חיבור בין עולמות הרוח לבין המציאות הישראלית</p>
+
+        <ol class="about-editorial__facts" data-el="about-facts">
+          <li><svg class="line-icon about-editorial__fact-icon" data-draw aria-hidden="true"><use href="#ic-degree"/></svg><p>תואר ראשון בפילוסופיה, מכללת שלם</p></li>
+          <li><svg class="line-icon about-editorial__fact-icon" data-draw aria-hidden="true"><use href="#ic-questions"/></svg><p>עיסוק בפילוסופיה ובשאלות של משמעות</p></li>
+          <li><svg class="line-icon about-editorial__fact-icon" data-draw aria-hidden="true"><use href="#ic-facilitation"/></svg><p>ניסיון בהנחיית קבוצות ותהליכי למידה</p></li>
+        </ol>
+
+        <a class="link-cta about__cta" href="#contact" data-el="about-cta">
+          <span class="link-cta__label">ליצירת קשר</span>
+          <span class="link-cta__rule">
+            <svg class="ic" aria-hidden="true"><use href="#ic-arrow"/></svg>
+            <i class="link-cta__line link-cta__line--1" aria-hidden="true"></i>
+            <i class="link-cta__line link-cta__line--2" aria-hidden="true"></i>
+            <i class="link-cta__line link-cta__line--3" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 06 · קריאה לפעולה + טופס ══ -->
+  <section class="cta" id="contact" data-section="06 · קריאה לפעולה + טופס">
+    <div class="cta__bg" aria-hidden="true"></div>
+    <div class="wrap cta__inner">
+      <div class="cta__text">
+        <h2 class="h2 h2--light" data-el="cta-title">בואו נפתח בארגון שיחה על מה שבאמת חשוב</h2>
+        <p class="cta__lead">השאירו פרטים ונחזור אליכם לתיאום שיחת היכרות קצרה.</p>
+
+        <div class="social" data-el="cta-social">
+          <a href="#" aria-label="אינסטגרם"><svg class="ic" aria-hidden="true"><use href="#ic-instagram"/></svg></a>
+          <a href="#" aria-label="פייסבוק"><svg class="ic" aria-hidden="true"><use href="#ic-facebook"/></svg></a>
+          <a href="#" aria-label="וואטסאפ"><svg class="ic" aria-hidden="true"><use href="#ic-whatsapp"/></svg></a>
+          <a href="#" aria-label="דואר אלקטרוני"><svg class="ic" aria-hidden="true"><use href="#ic-mail"/></svg></a>
+          <a href="#" aria-label="טלפון"><svg class="ic" aria-hidden="true"><use href="#ic-phone"/></svg></a>
+        </div>
+      </div>
+
+      <form class="form" id="contact-form" novalidate data-el="contact-form">
+        <h3 class="form__title" data-el="form-title">מלאו את הפרטים ואנחנו מבטיחים לחזור אליכם בהקדם</h3>
+
+        <div class="field">
+          <label class="sr-only" for="f-name">שם מלא</label>
+          <input id="f-name" name="name" type="text" placeholder="שם מלא" autocomplete="name" required aria-describedby="e-name">
+          <p class="err" id="e-name" hidden></p>
+        </div>
+        <div class="field">
+          <label class="sr-only" for="f-org">ארגון</label>
+          <input id="f-org" name="org" type="text" placeholder="ארגון" autocomplete="organization" required aria-describedby="e-org">
+          <p class="err" id="e-org" hidden></p>
+        </div>
+        <div class="field">
+          <label class="sr-only" for="f-phone">טלפון</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="טלפון" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone">
+          <p class="err" id="e-phone" hidden></p>
+        </div>
+        <div class="field">
+          <label class="sr-only" for="f-email">דואר אלקטרוני</label>
+          <input id="f-email" name="email" type="email" placeholder="דואר אלקטרוני" autocomplete="email" required aria-describedby="e-email">
+          <p class="err" id="e-email" hidden></p>
+        </div>
+
+        <div class="field field--wide">
+          <label class="sr-only" for="f-org-type">סוג ארגון</label>
+          <select id="f-org-type" name="orgType" required aria-describedby="e-org-type">
+            <option value="" selected disabled>סוג ארגון</option>
+            <option value="business">חברה עסקית</option>
+            <option value="high-tech">חברת הייטק</option>
+            <option value="nonprofit">עמותה או מלכ״ר</option>
+            <option value="education">מוסד חינוכי או אקדמי</option>
+            <option value="public">מוסד ציבורי או ממשלתי</option>
+            <option value="municipal">רשות מקומית</option>
+            <option value="health">ארגון בריאות</option>
+            <option value="community">ארגון קהילתי</option>
+            <option value="other">אחר</option>
+          </select>
+          <p class="err" id="e-org-type" hidden></p>
+        </div>
+
+        <div class="field field--wide">
+          <label class="sr-only" for="f-message">הודעה</label>
+          <textarea id="f-message" name="message" rows="4" placeholder="כתבו לנו בקצרה במה תרצו לעסוק"></textarea>
+        </div>
+
+        <button class="btn btn--light form__submit" type="submit">שליחה</button>
+
+        <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ 07 · פוטר ══ -->
+<footer class="foot" data-section="07 · פוטר">
+  <div class="wrap foot__inner">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <img src="assets/img/logo.svg" alt="משיבי רוח" width="388" height="181" loading="lazy">
+        <p>סדנאות משמעות ורוח במקומות העבודה</p>
+      </div>
+
+      <nav class="foot__nav" aria-label="ניווט תחתון">
+        <h2 class="foot__h">מפת האתר</h2>
+        <ul>
+          <li><a href="#offer">מה אנחנו מציעים</a></li>
+          <li><a href="#approach">הייחוד</a></li>
+          <li><a href="#audience">למי זה מתאים</a></li>
+          <li><a href="#about">על המנחה</a></li>
+          <li><a href="#contact">יצירת קשר</a></li>
+        </ul>
+      </nav>
+
+      <div class="foot__legalnav">
+        <h2 class="foot__h">מידע</h2>
+        <ul>
+          <li><a href="#">מדיניות פרטיות</a></li>
+          <li><a href="#">הצהרת נגישות</a></li>
+          <li><a href="#">תנאי שימוש</a></li>
+        </ul>
+        <p class="ph ph--inline"><span class="ph__tag">⚠ העמודים טרם נבנו</span></p>
+      </div>
+
+      <div class="foot__contact">
+        <h2 class="foot__h">יצירת קשר</h2>
+        <div class="social social--foot" data-el="footer-social">
+          <a href="#" aria-label="אינסטגרם"><svg class="ic" aria-hidden="true"><use href="#ic-instagram"/></svg></a>
+          <a href="#" aria-label="פייסבוק"><svg class="ic" aria-hidden="true"><use href="#ic-facebook"/></svg></a>
+          <a href="#" aria-label="וואטסאפ"><svg class="ic" aria-hidden="true"><use href="#ic-whatsapp"/></svg></a>
+          <a href="#" aria-label="דואר אלקטרוני"><svg class="ic" aria-hidden="true"><use href="#ic-mail"/></svg></a>
+          <a href="#" aria-label="טלפון"><svg class="ic" aria-hidden="true"><use href="#ic-phone"/></svg></a>
+        </div>
+        <div class="ph ph--block" data-el="footer-contact">
+          <span class="ph__tag">⚠ פרטי קשר טרם נמסרו — לאישור הלקוח</span>
+          <span class="ph__slot">טלפון · דואר אלקטרוני · קישורים</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="foot__legal">© <span dir="ltr">2026</span> משיבי רוח. כל הזכויות שמורות. · סקיצה ב׳ — עיצוב חלופי</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

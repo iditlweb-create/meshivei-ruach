@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>משיבי רוח · סקיצה לסקשן השאלות</title>
+  <meta name="theme-color" content="#fbf8f2">
+  <link rel="preload" href="assets/fonts/basalt-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/discovery-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="problem-sketch.css">
+  <script src="problem-sketch.js" defer></script>
+</head>
+<body>
+  <main class="problem-sketch" aria-labelledby="problem-title">
+    <div class="problem-sketch__sticky">
+      <canvas class="problem-film" aria-hidden="true"></canvas>
+      <img class="problem-poster" src="frames/hero/0036.jpg" alt="מסדרון הנפתח אל חדר ישיבות" width="1600" height="900">
+      <div class="problem-fade" aria-hidden="true"></div>
+
+      <header class="problem-copy">
+        <span class="problem-copy__eyebrow">האתגר האנושי בעולם העבודה</span>
+        <h1 id="problem-title">עובדים לא נשחקים רק מעומס</h1>
+        <p>ארגונים רבים משקיעים ברווחה, בהכשרות ובפיתוח מקצועי. אך לצד האתגרים המקצועיים מתעוררות גם שאלות אנושיות עמוקות יותר</p>
+      </header>
+
+      <img class="problem-person" src="assets/thinking-tech-worker.png" alt="עובד הייטק מהרהר בשאלות משמעות" width="1024" height="1536">
+
+      <div class="question-pair question-pair--one is-active" aria-label="זוג השאלות הראשון">
+        <article class="question-note question-note--right">
+          <span aria-hidden="true">01</span>
+          <p>מה מעניק משמעות לעשייה?</p>
+        </article>
+        <article class="question-note question-note--left">
+          <span aria-hidden="true">02</span>
+          <p>כיצד מתמודדים עם חוסר ודאות?</p>
+        </article>
+      </div>
+
+      <div class="question-pair question-pair--two" aria-label="זוג השאלות השני">
+        <article class="question-note question-note--right">
+          <span aria-hidden="true">03</span>
+          <p>מה מחבר בין האדם לבין עבודתו?</p>
+        </article>
+        <article class="question-note question-note--left">
+          <span aria-hidden="true">04</span>
+          <p>כיצד בונים חוסן אישי וקהילתי?</p>
+        </article>
+      </div>
+
+      <div class="problem-progress" aria-hidden="true"><i></i><i></i></div>
+      <span class="problem-edge" aria-hidden="true">משיבי רוח / שאלות של משמעות</span>
+    </div>
+  </main>
+</body>
+</html>
