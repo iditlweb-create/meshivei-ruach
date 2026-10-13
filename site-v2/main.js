@@ -7,7 +7,8 @@
 
   var mqSmall = window.matchMedia('(max-width: 767.98px)');
   var mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var isStatic = function () { return mqSmall.matches || mqMotion.matches; };
+  /* מובייל מקבל סקראב (עם רצף פריימים מכווץ); סטטי רק תחת הפחתת תנועה */
+  var isStatic = function () { return mqMotion.matches; };
 
   var pad = function (n) { return String(n).padStart(4, '0'); };
   var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
@@ -35,21 +36,28 @@
     this.drawn = -1;
   }
 
+  /* רצף מכווץ למובייל (חיתוך מרכזי 640×720) בתיקייה <seq>-m */
+  Scrubber.prototype.dir = function () {
+    return this.seq + (mqSmall.matches ? '-m' : '');
+  };
+
   Scrubber.prototype.src = function (i) {
-    return 'frames/' + this.seq + '/' + pad(i + 1) + '.' + this.ext;
+    return 'frames/' + this.dir() + '/' + pad(i + 1) + '.' + this.ext;
   };
 
   /* טעינה מקדימה מלאה — לא מציירים לפני שכל הרצף בזיכרון */
   Scrubber.prototype.preload = function () {
     if (this.loading || this.ready) return;
     this.loading = true;
-    var self = this, done = 0;
+    this.loadedDir = this.dir();
+    var self = this, done = 0, batch = this.frames;
     for (var i = 0; i < this.count; i++) {
       var img = new Image();
       img.decoding = 'async';
       img.src = this.src(i);
       this.frames.push(img);
       var onDone = function () {
+        if (self.frames !== batch) return;
         done++;
         if (self.bar) self.bar.style.width = (done / self.count * 100) + '%';
         if (done === self.count) {
@@ -94,21 +102,26 @@
     this.progress = span > 0 ? clamp(-r.top / span) : (r.top <= 0 ? 1 : 0);
   };
 
+  /* נקודות קו הספר (y יחסי). במובייל הקו נמוך ושטוח יותר כדי לפנות מקום לטקסט */
+  var ARCH_DESKTOP = [.403, .573, .633, .613, .593, .593, .633, .683, .813, .883];
+  var ARCH_MOBILE = [.56, .67, .71, .70, .69, .69, .71, .76, .86, .92];
+
   Scrubber.prototype.setArchShape = function (t) {
+    var y = (mqSmall.matches ? ARCH_MOBILE : ARCH_DESKTOP).map(function (v) { return v * t; });
     if (this.archClipPath) {
       this.archClipPath.setAttribute('d',
-        'M0 ' + (.403 * t) +
-        ' C.06 ' + (.573 * t) + ' .17 ' + (.633 * t) + ' .31 ' + (.613 * t) +
-        ' C.48 ' + (.593 * t) + ' .68 ' + (.593 * t) + ' .82 ' + (.633 * t) +
-        ' C.92 ' + (.683 * t) + ' .97 ' + (.813 * t) + ' 1 ' + (.883 * t) +
+        'M0 ' + y[0] +
+        ' C.06 ' + y[1] + ' .17 ' + y[2] + ' .31 ' + y[3] +
+        ' C.48 ' + y[4] + ' .68 ' + y[5] + ' .82 ' + y[6] +
+        ' C.92 ' + y[7] + ' .97 ' + y[8] + ' 1 ' + y[9] +
         ' L1 1 L0 1Z');
     }
     if (this.archOutlinePath) {
       this.archOutlinePath.setAttribute('d',
-        'M0 ' + (373 * t) +
-        ' C70 ' + (543 * t) + ' 200 ' + (603 * t) + ' 350 ' + (583 * t) +
-        ' C510 ' + (563 * t) + ' 700 ' + (573 * t) + ' 840 ' + (613 * t) +
-        ' C930 ' + (663 * t) + ' 980 ' + (783 * t) + ' 1000 ' + (873 * t));
+        'M0 ' + y[0] * 1000 +
+        ' C70 ' + y[1] * 1000 + ' 200 ' + y[2] * 1000 + ' 350 ' + y[3] * 1000 +
+        ' C510 ' + y[4] * 1000 + ' 700 ' + y[5] * 1000 + ' 840 ' + y[6] * 1000 +
+        ' C930 ' + y[7] * 1000 + ' 980 ' + y[8] * 1000 + ' 1000 ' + y[9] * 1000);
     }
   };
 
@@ -160,6 +173,12 @@
 
   /* חזרה למצב סקראב (שינוי רוחב חלון) */
   Scrubber.prototype.dynamicMode = function () {
+    /* מעבר בין מובייל לדסקטופ — טוענים את הרצף המתאים מחדש */
+    if (this.loadedDir && this.loadedDir !== this.dir()) {
+      this.frames = []; this.ready = false; this.loading = false; this.loadedDir = null;
+      this.el.classList.remove('is-ready');
+      if (this.bar) this.bar.style.width = '0';
+    }
     if (this.poster && !this.ready) this.poster.src = this.src(0);
   };
 

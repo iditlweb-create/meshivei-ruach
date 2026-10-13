@@ -823,28 +823,15 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}
   .nav__links a{padding-block:12px}
   .nav__toggle{display:block}
 
-  .cine--hero{height:auto !important}
-  .cine__sticky{position:relative;height:auto;min-height:100vh}
-  .cine__canvas{display:none}
-  .cine__poster{opacity:1 !important}
-  .cine__loader{display:none}
-  .arch{position:relative;inset-block-start:0 !important;height:46vh;border-radius:0!important;
-    clip-path:polygon(0 5%,8% 13%,20% 19%,39% 21%,58% 20%,76% 24%,88% 36%,96% 57%,100% 78%,100% 100%,0 100%)}
-  .arch-back{display:none}
-  .hero-stage{position:relative;height:auto;padding:clamp(70px,14vw,110px) var(--pad)}
-  .beat--hero{position:relative;inset:auto}
-  .hero__title{font-size:clamp(5rem,22vw,6.5rem);line-height:.9}
-  .hero__sub{font-size:clamp(1.55rem,7vw,2.2rem)}
-  .hero__lead{font-size:1rem;line-height:1.45}
+  /* הירו במובייל — אותו מבנה כמו בדסקטופ (סקשן דביק + סקראב), רק טיפוגרפיה מותאמת */
+  .beat--hero{inset-block-start:calc(var(--nav-h) + 20px)}
+  .hero__title{font-size:clamp(4.4rem,20vw,6.2rem);line-height:.9}
+  .hero__sub{font-size:clamp(1.4rem,6.4vw,2rem);line-height:1.16;margin-block-start:12px}
+  .hero__lead{font-size:1rem;line-height:1.42;margin-block-start:14px;max-width:30ch}
   .link-cta__rule{width:min(68vw,260px)}
-  .hero__sub{margin-block-start:14px}
-  .hero__lead{margin-block-start:18px}
-  .beat--hero .link-cta{margin-block-start:24px}
-  .problem-stage{
-    position:relative;display:block;opacity:1;padding:clamp(64px,14vw,100px) var(--pad);
-    background:var(--olive-deep);color:var(--paper)
-  }
-  .problem-stage::before{background:linear-gradient(rgba(79,86,57,.96),rgba(79,86,57,.86)),var(--hero-grain)}
+  .beat--hero .link-cta{margin-block-start:18px}
+  /* כשהקשת סגורה רואים רק את תחתית המסך — מורידים את התמונה כדי שהדלת תיראה, וחוזרים ל-0 כשהקשת נפתחת */
+  .cine--hero .cine__canvas,.cine--hero .cine__poster{transform:translateY(calc(var(--t) * 32%))}
   .problem-stage__content{width:100%}
   .problem__title{font-size:clamp(2.7rem,13vw,4.2rem)}
   .problem__lead{font-size:1rem}
@@ -856,12 +843,8 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}
   .offer-windows__grid{grid-template-columns:1fr}
   .offer-window,.offer-window:nth-child(even){min-height:260px;transform:none}
   .offer-window:nth-child(even):hover{transform:translateY(-6px)}
-  .beat{opacity:1 !important;transform:none !important;pointer-events:auto}
   .bubble{opacity:1 !important;transform:none !important;max-width:280px}
-  .scrollcue{display:none}
 
-  .cine{height:auto !important}
-  .cine__sticky{min-height:88vh}
   .cine__stage{position:relative;display:block;padding-block:clamp(90px,18vw,130px)}
   .cine__stage > *{max-width:none}
   .anchors li{opacity:1 !important;transform:none !important}
@@ -1090,42 +1073,17 @@ code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}
 }
 
 @media (max-width:767.98px){
-  .cine--hero .problem-stage{
-    min-height:980px;padding:0;background:url("frames/hero/0072.jpg") center/cover no-repeat;color:var(--ink);
-  }
-  .problem-new__fade{background:linear-gradient(180deg,rgba(251,248,242,.97),rgba(251,248,242,.74))}
-  .problem-new__copy{inset-block-start:calc(var(--nav-h) + 18px);width:calc(100% - 30px);opacity:1;transform:translateX(-50%)}
-  .problem-new__copy h2{font-size:clamp(3rem,13vw,4rem)}
-  .problem-new__copy p{width:100%;font-size:1rem;margin-block-start:13px}
-  .problem-new__person{
-    height:54%;inset-block-end:15%;opacity:1;transform:translateX(-50%);
-  }
-  .problem-question-pair{inset:auto 15px 62px;display:grid;grid-template-columns:1fr;gap:10px;opacity:0}
-  .problem-question-pair--two{display:none}
-  .problem-question-pair--one{opacity:1}
-  .problem-note{
-    position:relative;inset:auto;width:82%;min-height:116px;padding:28px 25px 22px;
-    opacity:1;transform:none!important;animation:none!important;
-  }
-  .problem-note--left{margin-inline-start:auto}
-  .problem-note p{font-size:1.65rem}
-  .problem-new__progress,.problem-new__edge{display:none}
-
-  .cine--hero .cine__sticky{display:flex;flex-direction:column;min-height:0}
-  .cine--hero .hero-stage{
-    order:1;height:auto;min-height:0;padding:calc(var(--nav-h) + 30px) 20px 30px;
-    display:block;flex:none;
-  }
-  .cine--hero .beat--hero{position:relative;inset:auto}
-  .cine--hero .hero__title{font-size:clamp(5rem,22vw,6.5rem);line-height:.9}
-  .cine--hero .hero__sub{font-size:clamp(1.45rem,7vw,1.9rem);line-height:1.16;margin-block-start:12px}
-  .cine--hero .hero__lead{font-size:1rem;line-height:1.42;margin-block-start:15px;max-width:32ch}
-  .cine--hero .beat--hero .link-cta{margin-block-start:20px}
-  .cine--hero .arch{
-    order:2;position:relative;inset:0!important;width:calc(100% + 24px);height:max(37svh,300px);
-    margin-inline:-12px;flex:none;border-radius:50% 50% 0 0 / 29% 29% 0 0!important;
-  }
-  .cine--hero .problem-stage{order:3;flex:none}
+  .problem-new__copy{inset-block-start:calc(var(--nav-h) + 14px);width:calc(100% - 32px)}
+  .problem-new__copy h2{font-size:clamp(2.3rem,10.5vw,3.4rem)}
+  .problem-new__copy p{width:100%;font-size:.98rem;line-height:1.4;margin-block-start:10px}
+  .problem-new__person{height:min(46svh,440px);inset-block-end:-4%}
+  .problem-question-pair{inset:auto 14px 9%;height:44%}
+  .problem-note{inset-block-start:0;width:70%;min-height:0;padding:26px 22px 20px}
+  .problem-note--left{inset-block-start:auto;inset-block-end:0}
+  .problem-note p{font-size:clamp(1.25rem,5.6vw,1.6rem)}
+  .problem-note::after{font-size:5rem}
+  .problem-new__progress{inset-block-end:2%}
+  .problem-new__edge{display:none}
 }
 
 @media (prefers-reduced-motion:reduce){
