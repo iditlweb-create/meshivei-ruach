@@ -104,10 +104,11 @@
 
   /* נקודות קו הספר (y יחסי). במובייל הקו נמוך ושטוח יותר כדי לפנות מקום לטקסט */
   var ARCH_DESKTOP = [.403, .573, .633, .613, .593, .593, .633, .683, .813, .883];
-  var ARCH_MOBILE = [.56, .67, .71, .70, .69, .69, .71, .76, .86, .92];
+  var ARCH_MOBILE = [.42, .50, .54, .53, .51, .51, .54, .60, .74, .82];
 
   Scrubber.prototype.setArchShape = function (t) {
     var y = (mqSmall.matches ? ARCH_MOBILE : ARCH_DESKTOP).map(function (v) { return v * t; });
+    var outlineY = y.map(function (v) { return Math.max(0, v - .025 * t); });
     if (this.archClipPath) {
       this.archClipPath.setAttribute('d',
         'M0 ' + y[0] +
@@ -118,10 +119,10 @@
     }
     if (this.archOutlinePath) {
       this.archOutlinePath.setAttribute('d',
-        'M0 ' + y[0] * 1000 +
-        ' C70 ' + y[1] * 1000 + ' 200 ' + y[2] * 1000 + ' 350 ' + y[3] * 1000 +
-        ' C510 ' + y[4] * 1000 + ' 700 ' + y[5] * 1000 + ' 840 ' + y[6] * 1000 +
-        ' C930 ' + y[7] * 1000 + ' 980 ' + y[8] * 1000 + ' 1000 ' + y[9] * 1000);
+        'M0 ' + outlineY[0] * 1000 +
+        ' C70 ' + outlineY[1] * 1000 + ' 200 ' + outlineY[2] * 1000 + ' 350 ' + outlineY[3] * 1000 +
+        ' C510 ' + outlineY[4] * 1000 + ' 700 ' + outlineY[5] * 1000 + ' 840 ' + outlineY[6] * 1000 +
+        ' C930 ' + outlineY[7] * 1000 + ' 980 ' + outlineY[8] * 1000 + ' 1000 ' + outlineY[9] * 1000);
     }
   };
 
