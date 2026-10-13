@@ -69,7 +69,7 @@ HTML/CSS/JS סטטי טהור, ללא build step, ללא framework.
   4. יעד שליחת הטופס — hook מוכן ב-`SUBMIT_ENDPOINT` בתחילת
      [site/main.js](../site/main.js)
   5. פרטי קשר לפוטר + קישורי רשתות חברתיות
-- **אין עדיין ריפו git.** הפרויקט מקומי בלבד.
+- **ריפו:** https://github.com/iditlweb-create/meshivei-ruach (ציבורי). אתר חי ב-GitHub Pages: https://iditlweb-create.github.io/meshivei-ruach/ (השורש מפנה ל-`site-v2/`).
 - כלי הערות חי בעמוד עצמו: כפתור "✎ מצב הערות" מאפשר לבחור כל אלמנט
   ולכתוב הערה; כפתור העין שולט אם הסימונים הכתומים מוצגים על הדף
   (כבוי כברירת מחדל, נשמר ב-localStorage). "שליחה לקלוד" כותבת את כל
